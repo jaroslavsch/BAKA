@@ -1,0 +1,126 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4050,        116]
+NotebookOptionsPosition[      3515,        100]
+NotebookOutlinePosition[      3911,        116]
+CellTagsIndexPosition[      3868,        113]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"risingFactorial", "[", 
+   RowBox[{"n_", ",", "k_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Product", "[", 
+   RowBox[{
+    RowBox[{"n", "+", "i"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "0", ",", 
+      RowBox[{"k", "-", "1"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.872592077277722*^9, 3.872592095397297*^9}, {
+  3.872592178885631*^9, 3.872592222941409*^9}, {3.872592255047098*^9, 
+  3.872592327114407*^9}, {3.872593417823752*^9, 3.872593418746674*^9}},
+ CellLabel->
+  "In[429]:=",ExpressionUUID->"f8547afa-b187-4c75-9d69-c66f89fc0b74"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"solutionCoeff", "[", "n_", "]"}], " ", ":=", " ", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    RowBox[{
+     RowBox[{"(", "f1", ")"}], "^", "n"}]}], " ", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"risingFactorial", "[", 
+       RowBox[{"n", ",", "k"}], "]"}], " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], "^", "k"}], " ", 
+      RowBox[{"BellY", "[", 
+       RowBox[{
+        RowBox[{"n", "-", "1"}], ",", "k", ",", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringJoin", "[", 
+            RowBox[{"\"\<f\>\"", ",", 
+             RowBox[{"ToString", "[", 
+              RowBox[{"i", "+", "1"}], "]"}]}], "]"}], "/", 
+           RowBox[{"(", 
+            RowBox[{"f1", 
+             RowBox[{"(", 
+              RowBox[{"i", "+", "1"}], ")"}]}], ")"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", 
+            RowBox[{"n", "-", "k"}]}], "}"}]}], "]"}]}], "]"}]}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "1", ",", 
+       RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"solutionCoeff", "[", "1", "]"}], " ", ":=", " ", 
+  RowBox[{"1", "/", "f1"}]}]}], "Input",
+ CellChangeTimes->{{3.872592343840248*^9, 3.872592445385828*^9}, {
+  3.872592525716689*^9, 3.872592626346965*^9}, {3.872592660940559*^9, 
+  3.872592679219805*^9}, {3.872592927402079*^9, 3.872592943805374*^9}, {
+  3.8725929911258383`*^9, 3.872592991416025*^9}, {3.8725930788391037`*^9, 
+  3.872593081348847*^9}, {3.872593240778983*^9, 3.872593241031152*^9}, {
+  3.872593421100968*^9, 3.872593425613483*^9}, {3.872599934164361*^9, 
+  3.872599942301888*^9}},
+ CellLabel->
+  "In[438]:=",ExpressionUUID->"2b23ffd2-874a-458e-8047-5504ce90ce58"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"result", " ", "[", "order_", "]"}], " ", ":=", " ", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"solutionCoeff", "[", "k", "]"}], "/", 
+      RowBox[{"Factorial", "[", "k", "]"}]}], " ", 
+     RowBox[{"z", "^", "k"}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "0", ",", "order"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.872593445560986*^9, 3.872593501445197*^9}},
+ CellLabel->
+  "In[432]:=",ExpressionUUID->"0c3ea868-a89b-4654-a6b3-ed9bcebbe9e4"]
+},
+WindowSize->{474., 777.75},
+WindowMargins->{{483, Automatic}, {7.5, Automatic}},
+FrontEndVersion->"12.1 for Linux x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ae069d55-5de4-4752-ae9d-38879662bfc5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 597, 14, 51, "Input",ExpressionUUID->"f8547afa-b187-4c75-9d69-c66f89fc0b74"],
+Cell[1158, 36, 1813, 46, 164, "Input",ExpressionUUID->"2b23ffd2-874a-458e-8047-5504ce90ce58"],
+Cell[2974, 84, 537, 14, 75, "Input",ExpressionUUID->"0c3ea868-a89b-4654-a6b3-ed9bcebbe9e4"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
