@@ -1,0 +1,5 @@
+idea: zavest grasmann, gauss v jednom apendixu, pak path integraly a aplikace toho do nich v druhem
+
+v main textu namotivovat teorii pole ala Coleman, Banks, rict, ze z korelatoru v QM spocitame spektrum (Banks), elementy S-matice. Dal ale pokracovat bootstrapem ala Zamolodchikov, ukazat zajimave RG ala Rapcak, Wilson, Zamolodchikov (c-theorem) -> ukazat vyznacnost fixnich bodu -> kapitola 2 o CFTs -> kapitola 3 o zakladech teorie strun -> kapitola 4 o OSFT -> kapitola 5 o vlastnim prinosu
+
+https://users.math.cas.cz/~pudlak/disertace.html
